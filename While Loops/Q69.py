@@ -1,4 +1,3 @@
-import random
 health=100
 hunger=100
 water=100
@@ -20,8 +19,8 @@ while running:
     elif action=="3":
         energy=min(100,energy+20)
     elif action=="4":
-        event=random.randint(1,10)
-        if event==1:
+        gothurt=input("Did you get hurt while exploring? (yes/no): ")
+        if gothurt=="yes":
             health-=15
             print("You got hurt while exploring!")
         else:

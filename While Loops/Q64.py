@@ -1,29 +1,25 @@
-import random
-import string
 found=False
+symbols="!@#$%^&*"
 while not found:
-    password=""
-    i=0
-    while i<8:
-        password+=random.choice(string.ascii_letters+string.digits+string.punctuation)
-        i+=1
+    password=input("Enter a password: ")
     hasupper=False
     haslower=False
     hasdigit=False
     hassymbol=False
-    j=0
-    while j<len(password):
-        ch=password[j]
+    i=0
+    while i<len(password):
+        ch=password[i]
         if ch.isupper():
             hasupper=True
         elif ch.islower():
             haslower=True
         elif ch.isdigit():
             hasdigit=True
-        elif ch in string.punctuation:
+        elif ch in symbols:
             hassymbol=True
-        j+=1
-    print(f"Generated: {password}")
+        i+=1
     if hasupper and haslower and hasdigit and hassymbol:
         found=True
-print(f"Valid password found: {password}")
+    else:
+        print("Password must contain uppercase, lowercase, digit and symbol, try again")
+print(f"Valid password accepted: {password}")

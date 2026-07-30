@@ -1,5 +1,4 @@
-import random
-target=random.randint(1,100)
+target=57
 guess=int(input("Guess the number (1-100): "))
 while guess!=target:
     if guess<target:

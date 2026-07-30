@@ -1,4 +1,3 @@
-import random
 health=100
 gold=50
 inventory=[]
@@ -17,11 +16,10 @@ while running:
     if choice=="1":
         enemyhealth=30
         while enemyhealth>0 and health>0:
-            damage=random.randint(5,15)
+            damage=int(input("Enter damage dealt to enemy: "))
             enemyhealth-=damage
-            enemydamage=random.randint(3,10)
+            enemydamage=int(input("Enter damage taken from enemy: "))
             health-=enemydamage
-            print(f"You dealt {damage} damage, enemy dealt {enemydamage} damage")
         if health>0:
             gold+=20
             print("You defeated the enemy and earned 20 gold")
@@ -45,11 +43,10 @@ while running:
     elif choice=="4":
         bosshealth=80
         while bosshealth>0 and health>0:
-            damage=random.randint(5,20)
+            damage=int(input("Enter damage dealt to boss: "))
             bosshealth-=damage
-            bossdamage=random.randint(5,15)
+            bossdamage=int(input("Enter damage taken from boss: "))
             health-=bossdamage
-            print(f"You dealt {damage} damage, boss dealt {bossdamage} damage")
         if health>0:
             print("You defeated the final boss! You win the game!")
             running=False

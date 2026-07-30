@@ -1,10 +1,11 @@
-import random
 racer1=0
 racer2=0
 finish=50
 while racer1<finish and racer2<finish:
-    racer1+=random.randint(1,10)
-    racer2+=random.randint(1,10)
+    move1=int(input("Enter Racer 1's move: "))
+    move2=int(input("Enter Racer 2's move: "))
+    racer1+=move1
+    racer2+=move2
     print(f"Racer 1: {racer1}, Racer 2: {racer2}")
 if racer1>=finish and racer2>=finish:
     print("It's a tie!")

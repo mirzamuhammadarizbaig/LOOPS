@@ -1,20 +1,17 @@
-import random
-options=["rock","paper","scissors"]
-playerscore=0
-computerscore=0
-while playerscore<5 and computerscore<5:
-    player=input("Choose rock, paper or scissors: ")
-    computer=random.choice(options)
-    print(f"Computer chose {computer}")
-    if player==computer:
+player1score=0
+player2score=0
+while player1score<5 and player2score<5:
+    player1=input("Player 1, choose rock, paper or scissors: ")
+    player2=input("Player 2, choose rock, paper or scissors: ")
+    if player1==player2:
         print("It's a tie")
-    elif (player=="rock" and computer=="scissors") or (player=="paper" and computer=="rock") or (player=="scissors" and computer=="paper"):
-        playerscore+=1
-        print(f"You win this round! Score: {playerscore}-{computerscore}")
+    elif (player1=="rock" and player2=="scissors") or (player1=="paper" and player2=="rock") or (player1=="scissors" and player2=="paper"):
+        player1score+=1
+        print(f"Player 1 wins this round! Score: {player1score}-{player2score}")
     else:
-        computerscore+=1
-        print(f"Computer wins this round! Score: {playerscore}-{computerscore}")
-if playerscore==5:
-    print("You won the match!")
+        player2score+=1
+        print(f"Player 2 wins this round! Score: {player1score}-{player2score}")
+if player1score==5:
+    print("Player 1 won the match!")
 else:
-    print("Computer won the match!")
+    print("Player 2 won the match!")

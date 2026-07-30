@@ -1,10 +1,6 @@
-import random
-captcha=str(random.randint(1000,9999))
-print(f"Enter this CAPTCHA code: {captcha}")
-entered=input("Your input: ")
+captcha="8452"
+entered=input(f"Enter this CAPTCHA code {captcha}: ")
 while entered!=captcha:
     print("Incorrect CAPTCHA, try again")
-    captcha=str(random.randint(1000,9999))
-    print(f"Enter this CAPTCHA code: {captcha}")
-    entered=input("Your input: ")
+    entered=input(f"Enter this CAPTCHA code {captcha}: ")
 print("CAPTCHA solved successfully")

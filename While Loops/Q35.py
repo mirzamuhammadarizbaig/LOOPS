@@ -1,9 +1,7 @@
-import random
-rooms=["kitchen","basement","attic","garden","garage"]
-treasureroom=random.choice(rooms)
+treasureroom="attic"
 found=False
 while not found:
-    room=input(f"Choose a room to search {rooms}: ")
+    room=input("Choose a room to search (kitchen, basement, attic, garden, garage): ")
     if room==treasureroom:
         print("You found the treasure!")
         found=True

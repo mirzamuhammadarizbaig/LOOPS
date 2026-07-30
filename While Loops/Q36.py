@@ -1,10 +1,8 @@
-import random
 heads=0
 flips=0
 while heads<5:
-    flip=random.choice(["heads","tails"])
+    flip=input("Enter the flip result (heads/tails): ")
     flips+=1
-    print(f"Flip {flips}: {flip}")
     if flip=="heads":
         heads+=1
     else:
