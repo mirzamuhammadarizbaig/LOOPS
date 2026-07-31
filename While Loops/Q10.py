@@ -1,11 +1,7 @@
-correctPassword = "miti123"
+N=10
 
-password = input("Enter Password: ")
+totalSum=0
 
-while password != correctPassword:
-
-    print("Wrong Password!")
-
-    password = input("Enter Password: ")
-
-print("Access Granted!")
+for i in range(1, N + 1):
+    totalSum+=i
+    print(totalSum)

@@ -1,19 +1,15 @@
-password=1234
-attempts=3
+print("=====STUDENT MARKS=====\n")
 
-while attempts>0:
-    userPassword=int(input("Enter the password: "))
-    if userPassword==password:
-        print("Login Succesful")
-        break
+number=int(input("Enter the number of subject: "))
 
-    else:
-        attempts-=1
-        print("Wrong Password")
+total=0
 
-        if attempts>0:
-            print(f"Attempts Left = {attempts}")
+for i in range(1, number + 1):
+    marks = int(input(f"Enter marks of Subject {i}: "))
+    total += marks
 
-if attempts==0:
-    print("Account locked")
-       
+average= total / number
+
+print("\n-----RESULT-----")
+print(f"Total Marks = {total}")
+print(f"Averge marks = {average}")
