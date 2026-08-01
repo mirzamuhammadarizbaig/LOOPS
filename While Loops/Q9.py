@@ -1,3 +1,11 @@
-for i in range(1,16):
-    cube=i**3
-    print(cube)
+total = 0
+
+number = int(input("Enter a number (0 to stop): "))
+
+while number != 0:
+
+    total += number
+
+    number = int(input("Enter a number (0 to stop): "))
+
+print(f"Total Sum: {total}")

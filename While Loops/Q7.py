@@ -1,4 +1,9 @@
-number=6
+number = int(input("Enter a number: "))
 
-for i in range(1,11):
-    print(f"{number} x {i} = {number*i}")
+while number <= 0:
+
+    print("Invalid! Please enter a positive number.")
+
+    number = int(input("Enter a number: "))
+
+print(f"{number} is a positive number.")
